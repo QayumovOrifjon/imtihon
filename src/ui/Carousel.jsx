@@ -42,12 +42,12 @@ const Carousel = ({}) => {
 
   return (
     <>
-      <div className="relative">
+      <div className="relative ">
         <Slider ref={sliderRef} {...settings}>
           {carousel.map((item) => (
             <div
               key={item.id}
-              className="rounded-[10px] w-full max-w-[236px] md:max-w-[320px] border border-[#D5D1E1] overflow-hidden "
+              className="rounded-[10px] w-full max-w-[236px] md:max-w-[315px] border border-[#D5D1E1] overflow-hidden "
             >
               <div className="bg-white p-[10px] md:p-[30px] lg:p-[50px] relative mb-[15px] lg:mb-[20px]  flex justify-center items-center border-b border-[#D5D1E1]">
                 <img src={item.img} alt="image" className='w-full h-[172px] md:h-[142px]  lg:h-[229px]' />
@@ -99,7 +99,7 @@ const Carousel = ({}) => {
           </button>
         </div>
 
-        <div className="flex sm:hidden lg:flex  gap-4">
+        <div className="flex sm:hidden lg:flex  gap-4 px-[35px]">
           <ButtSte title={'Бесплатная консультация'} />
           <ButtTel title={'Все товары'} />
         </div>

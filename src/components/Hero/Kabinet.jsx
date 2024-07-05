@@ -31,7 +31,7 @@ const Kabinet = () => {
   };
 
   return (
-    <div className="container mb-[82px] md:mb-[120px] lg:mb-[150px]  ">
+    <div className=" mb-[82px] md:mb-[120px] lg:mb-[150px]  pl-[35px]">
       <div className=" mb-[25px] lg:mb-[43px]">
       
       </div>
@@ -42,7 +42,7 @@ const Kabinet = () => {
       <div className="overflow-hidden ">
         <Slider ref={sliderRef} {...settings}>
           {kabinet.map((item) => (
-            <div key={item.id} className="border max-w-[420px]  border-[#E5E2EE] rounded-[10px]">
+            <div key={item.id} className="border max-w-[430px] border-[#E5E2EE] rounded-[10px]">
               <div className="lg:h-[517px]">
                 <img src={item.img} alt={item.title} className="w-full h-full" />
               </div>
@@ -73,7 +73,7 @@ const Kabinet = () => {
           </button>
         </div>
 
-        <div className="flex flex-col sm:flex-row justify-center  gap-4">
+        <div className="flex flex-col sm:flex-row justify-center px-[35px]  gap-4">
           <ButtSte title={'Бесплатная консультация'} />
           <ButtTel title={'Рассчитать стоимость'} />
         </div>

@@ -43,9 +43,9 @@ const KompaniyeSlider = ({}) => {
       <div className="relative">
         <Slider ref={sliderRef} {...settings}>
           {kompaniyeSlider.map((item) => (
-                <div key={item.id} className='border border-[#E5E2EE]  rounded-[10px] overflow-hidden'> 
+                <div key={item.id} className='border max-w-[315px] border-[#E5E2EE]  rounded-[10px] over flow-hidden'> 
                   <div className='bg-white   flex justify-center items-center border-b border-[#E5E2EE]' >
-                    <img src={item.img} alt="image" />
+                    <img src={item.img} alt="image" className='object-contain'  />
                   </div>
                   <div className='px-[15px] lg:px-[20px] lg:pt-[15px] pt-[15px]'>
                     <p className='w-[70%] lg:w-[90%] text-[12px] md:text-[14px] lg:text-[16px] font-medium lg:leading-[140%] leading-[120%] '>{item.title} </p>
@@ -76,7 +76,7 @@ const KompaniyeSlider = ({}) => {
           </button>
         </div>
 
-        <div className="flex sm:hidden lg:flex  gap-4">
+        <div className="flex sm:hidden lg:flex px-[35px] gap-4">
           <ButtTel title={'Сертификаты'} />
         </div>
       </div>

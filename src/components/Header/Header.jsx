@@ -11,6 +11,7 @@ import { FiPhone } from 'react-icons/fi';
 import { IoIosSearch } from "react-icons/io";
 import { ButtTel, ButtZvo } from '../../ui/Button'
 import Slider from '../Slider/Slider'
+import { NavLink } from 'react-router-dom'
 
 const Header = () => {
   return (
@@ -50,20 +51,20 @@ const Header = () => {
 
     </div>
     <hr className='border-[#E5E2EE]'/>
-    <div className='border-b hidden md:block py-[20px] bg-[#F8F7F3]'>
+    <div className='border-b hidden md:block py-[20px] px-[35px] bg-[#F8F7F3]'>
 <div className='flex items-center justify-between'>
-  <ul className='flex gap-6 items-center'>
-    <li className='flex  items-center gap-1'>
+  <ul className='flex gap-6 items-center '>
+    <li className='flex  items-center gap-1 cursor-pointer'>
     <RiMenu2Fill />
-    <span className='text-[#202020] text-[14px] font-semibold leading-[normal]'>Каталог</span>
+    <span className='text-[#202020] text-[14px] font-semibold leading-[normal]'><NavLink to='/Katalog'>Каталог</NavLink></span>
     </li>
-    <li className='text-[#202020] text-[14px] font-semibold leading-[normal]'>Производители</li>
-    <li className='text-[#202020] text-[14px] font-semibold leading-[normal]'>Кабинеты под ключ
+    <li className='text-[#202020] text-[14px] font-semibold leading-[normal] cursor-pointer'>Производители</li>
+    <li className='text-[#202020] text-[14px] font-semibold leading-[normal] cursor-pointer'><NavLink to='/Kobinet'>Кабинеты под ключ</NavLink>
     </li>
-    <li className='text-[#202020] text-[14px] font-semibold leading-[normal]'>Услуги</li>
-    <li className='text-[#202020] text-[14px] font-semibold leading-[normal]'>Акции</li>
-    <li className='text-[#202020] text-[14px] font-semibold leading-[normal]'>Покупателям</li>
-    <li className='text-[#202020] text-[14px] font-semibold leading-[normal]'>Контакты</li>
+    <li className='text-[#202020] text-[14px] font-semibold leading-[normal] cursor-pointer'><NavLink to='/Uslugi'>Услуги</NavLink></li>
+    <li className='text-[#202020] text-[14px] font-semibold leading-[normal] cursor-pointer'>Акции</li>
+    <li className='text-[#202020] text-[14px] font-semibold leading-[normal] cursor-pointer'>Покупателям</li>
+    <li className='text-[#202020] text-[14px] font-semibold leading-[normal] cursor-pointer'><NavLink to='/Kontakt'>Контакты</NavLink></li>
   </ul>
   <div className='flex items-center gap-4'>
 <span className='flex items-center '><span>Москва</span>

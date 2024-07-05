@@ -4,11 +4,19 @@
 
 
 *{
-  font-family: Manrope;
-  list-style: none;
   text-decoration: none;
   
 }
+
+body{
+  
+    background-color: #f8f7f3;
+    font-family: "Manrope", sans-serif;
+    color: #202020;
+    font-style: normal;
+  
+}
+
 #root {
   max-width: 1440px;
   margin: 0 auto;
@@ -16,9 +24,13 @@
 
 }
 .container {
-  max-width: 1310px;
+  /* max-width: 1310px; */
   width: 100%;
   margin-inline: auto;
   padding-inline: 15px ;
+}
+.email{
+  background-image: url("/public/assets/Vector.svg");
+  background-repeat: no-repeat;
 }
 

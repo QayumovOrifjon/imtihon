@@ -40,10 +40,10 @@ const Brend = ({}) => {
 
   return (
     <>
-      <div className="relative">
+      <div className="relative ">
         <Slider ref={sliderRef} {...settings}>
           {brend.map((item) => (
-                <div key={item.id} className='border border-[#E5E2EE]  rounded-[10px] overflow-hidden '> 
+                <div key={item.id} className=' border max-w-[320px]  border-[#E5E2EE]  rounded-[10px] overflow-hidden '> 
                   <div className='bg-white h-[152px] lg:h-[196px] flex justify-center items-center border-b border-[#E5E2EE]' >
                     <img src={item.img} alt="image" />
                   </div>
@@ -73,7 +73,7 @@ const Brend = ({}) => {
           </button>
         </div>
 
-        <div className="flex sm:hidden lg:flex  gap-4">
+        <div className="flex sm:hidden lg:flex  gap-4 px-[35px]">
           <ButtTel title={'Сертификаты'} />
         </div>
       </div>

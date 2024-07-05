@@ -11,7 +11,7 @@ import img7 from "../../../public/assets/category7.png";
 const Category = () => {
   return (
     <div className="bg-[#f8f7f3]">
-      <div className="max-w-[1350px] mx-auto px-5">
+      <div className="mx-auto ml-[35px]">
         <h2 className="text-[30px] py-[20px]">Популярные категории</h2>
         <div className="grid grid-cols-4">
           <div className="flex flex-col gap-3">
