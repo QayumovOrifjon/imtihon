@@ -15,7 +15,6 @@ import Slider from 'react-slick';
 import Form from '../../ui/Form';
 import Footer from '../../components/Footer.jsx/Footer';
 
-
 const Kompani = () => {
   const navigate = useNavigate();
 
@@ -137,7 +136,7 @@ const Kompani = () => {
             </p>
           </div>
           <div className="grid grid-cols-[2fr_3fr] items-center">
-            <p className="text-[28px] md:text-[34px] text-[#088269] lg:text-[48px] font-medium leading-[110%]">
+            <p className="text-[28px] md:text-[34px] text-[#088269] lg:text-[48px] font-medium leading-[110%] react-number">
               2452+
             </p>
             <p className="text-3 md:text-[14px] lg:text-4 text-[#202020] ">

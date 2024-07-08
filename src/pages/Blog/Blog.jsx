@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, Outlet, useNavigate } from 'react-router-dom';
 import { MdKeyboardArrowRight } from 'react-icons/md';
 // import BlogArticle from '../../components/blogItems/BlogArticle';
 import { blog } from '../../Data/data';
@@ -8,6 +8,7 @@ import NapravleniyaList from '../../components/NapravleniyaList';
 import { ButtTel } from '../../ui/Button';
 import Email from '../../components/Email/Email';
 import Footer from '../../components/Footer.jsx/Footer';
+import Header from '../../components/Header/Header';
 
 const Blog = () => {
   const navigate = useNavigate();
@@ -19,9 +20,9 @@ const Blog = () => {
 
   const product = 4;
 
-  const renderProduct = (currentItems) => (
+  const renderProduct = (Items) => (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-[10px] ">
-      {currentItems.map((blog) => (
+      {Items.map((blog) => (
  <div className="grid grid-cols-1 lg:grid-cols-[3fr_5fr] border border-[#E5E2EE] rounded-[10px] ">
  <div className='rounded-[10px] overflow-hidden lg:h-[304px] '>
    <img src={blog.img} alt="" className='w-full h-[175px] lg:h-full object-cover ' />
@@ -43,6 +44,7 @@ const Blog = () => {
 
   return (
     <>
+    <Header/>
      <div className='flex pt-5 px-[35px]'>
 <p onClick={breadcast} className='text-[#7A7687] text-[14px] font-normal leading-[normal] cursor-pointer'>Главная {">"}</p> <span className='text-[#202020] text-[14px] font-normal leading-[normal] mb-[100px]'>Блог</span>
 
@@ -64,6 +66,7 @@ const Blog = () => {
       </div>
  <div className='mt-[150px]'>     <Email /></div>
      <Footer/>
+     <Outlet/>
     </>
   );
 };

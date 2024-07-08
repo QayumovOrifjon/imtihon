@@ -30,7 +30,7 @@ const FooterBot = () => {
           </div>
         </div>
 
-        <div className='flex flex-col md:flex-row md:justify-around md:col-[span_2]'>
+        <div className='flex flex-col md:flex-row md:justify-around md:col-[span_2] mb-[46px]' >
 
           <div className="mb-[30px] ">
             <p className="text-[12px] mb-1 text-white ">Партнерская программа</p>
@@ -55,7 +55,7 @@ const FooterBot = () => {
         </div>
       </div>
       <div className="pl-[35px] grid grid-cols-1 gap-[15px] md:gap-[10px] md:grid-cols-[1fr_4fr] pb-[10px] ">
-        <p className="text-white text-[12px] w-[150px]">© 2022 Медоборудование Все права защищены</p>
+        <p className="text-white text-[12px] w-[150px] ">© 2022 Медоборудование Все права защищены</p>
         <p className="text-white text-[12px] opacity-60 ">
           Информация на данном сайте носит справочный характер и не является публичной офертой,
           определяемой положениями Статьи 437 Гражданского кодекса Российской Федерации

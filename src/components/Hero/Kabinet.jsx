@@ -35,7 +35,7 @@ const Kabinet = () => {
       <div className=" mb-[25px] lg:mb-[43px]">
       
       </div>
-      <p className="text-[18px] md:text-[20px] lg:text-[30px] font-medium leading-[120%] text-[#202020] ">
+      <p className="text-[18px] md:text-[20px] lg:text-[30px] font-medium leading-[120%] text-[#202020] mb-[45px]">
       Комплексное оснащение кабинетов
       
   </p>

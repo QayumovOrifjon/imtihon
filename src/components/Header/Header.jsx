@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import logo from '../../../public/assets/Logo.svg'
 import Header1 from '../../../public/assets/Header.svg'
 import Header2 from '../../../public/assets/Header2.svg'
@@ -7,13 +7,15 @@ import Header4 from '../../../public/assets/Header4.svg'
 import { RiMenu2Fill } from 'react-icons/ri';
 import { CiLocationOn } from 'react-icons/ci';
 import { FiPhone } from 'react-icons/fi';
+import { IoCaretDownOutline } from "react-icons/io5";
 
 import { IoIosSearch } from "react-icons/io";
 import { ButtTel, ButtZvo } from '../../ui/Button'
-import Slider from '../Slider/Slider'
 import { NavLink } from 'react-router-dom'
 
 const Header = () => {
+  const [searchfilter, setSearchfilter] = useState(false);
+
   return (
     <>
     <div className='px-[35px] bg-[#F8F7F3]' >
@@ -21,11 +23,50 @@ const Header = () => {
  <div className='flex items-center gap-[35px] justify-start'>
  <img src={logo} alt="" className='m-0'/>
 
-<div className='flex items-center border rounded-full bg-white border-[#D5D1E1]'> 
+<div className='relative  flex items-center border rounded-full bg-white border-[#D5D1E1]'> 
+<div
+       onClick={() => setSearchfilter(!searchfilter)} 
+ className='flex items-center gap-1 text-[#7A7687] text-[14px] font-semibold leading-[normal] px-6 h-[39.5px] rounded-full bg-[#EFEFEF] outline-none'>
 
-  <select className="text-[#7A7687] text-[14px] font-semibold leading-[normal] px-6 h-[39.5px] rounded-full bg-[#EFEFEF] outline-none" name="" id="">
-                <option value="">Все категории</option>
-              </select>
+<p>Все категории </p>
+<IoCaretDownOutline 
+className={`${searchfilter? 'rotate-180':'rotate-0'} duration-200`}
+/>
+
+</div>
+{searchfilter && (
+                  <div className="absolute top-[40.5px] z-50 w-[270px] flex flex-col gap-2 left-0  bg-[#fff] px-[15px] py-[10px] rounded-lg border">
+                    <p className="text-[12px] cursor-pointer">Реанимация</p>
+                    <p className="text-[12px] cursor-pointer">Хирургия</p>
+                    <p className="text-[12px] cursor-pointer">Офтальмология</p>
+                    <p className="text-[12px] cursor-pointer">
+                      Лабораторная диагностика
+                    </p>
+                    <p className="text-[12px] cursor-pointer">Акушерство</p>
+                    <p className="text-[12px] cursor-pointer">Гинекология</p>
+                    <p className="text-[12px] cursor-pointer">Гистология</p>
+                    <p className="text-[12px] cursor-pointer">Косметология</p>
+                    <p className="text-[12px] cursor-pointer">
+                      Оториноларингология
+                    </p>
+                    <p className="text-[12px] cursor-pointer">
+                      Рентгенология и томография
+                    </p>
+                    <p className="text-[12px] cursor-pointer">
+                      Оториноларингология
+                    </p>
+                    <p className="text-[12px] cursor-pointer">Стерилизация</p>
+                    <p className="text-[12px] cursor-pointer">
+                      Физиотерапия и реабилитация
+                    </p>
+                    <p className="text-[12px] cursor-pointer"> Эндоскопия</p>
+                    <p className="text-[12px] cursor-pointer"> Новинки</p>
+                    <p className="text-[12px] cursor-pointer"> Распродажи</p>
+                    <p className="text-[12px] cursor-pointer">
+                      Кабинеты под ключ
+                    </p>
+                  </div>
+                )}
   
               <div className='flex items-center bg-[#D5D1E1] rounded-full'>
   <input type="search" id='search' placeholder='Поиск' className='text-[#7A7687] w-[420px] text-[14px] font-normal leading-[normal] outline-none p-2.5  rounded-r-full ' />
@@ -58,11 +99,11 @@ const Header = () => {
     <RiMenu2Fill />
     <span className='text-[#202020] text-[14px] font-semibold leading-[normal]'><NavLink to='/Katalog'>Каталог</NavLink></span>
     </li>
-    <li className='text-[#202020] text-[14px] font-semibold leading-[normal] cursor-pointer'>Производители</li>
+    <li className='text-[#202020] text-[14px] font-semibold leading-[normal] cursor-pointer'><NavLink to='/Proizvoditeli'>Производители</NavLink></li>
     <li className='text-[#202020] text-[14px] font-semibold leading-[normal] cursor-pointer'><NavLink to='/Kobinet'>Кабинеты под ключ</NavLink>
     </li>
     <li className='text-[#202020] text-[14px] font-semibold leading-[normal] cursor-pointer'><NavLink to='/Uslugi'>Услуги</NavLink></li>
-    <li className='text-[#202020] text-[14px] font-semibold leading-[normal] cursor-pointer'>Акции</li>
+    <li className='text-[#202020] text-[14px] font-semibold leading-[normal] cursor-pointer'><NavLink to='/Aktsiya'>Акции</NavLink></li>
     <li className='text-[#202020] text-[14px] font-semibold leading-[normal] cursor-pointer'>Покупателям</li>
     <li className='text-[#202020] text-[14px] font-semibold leading-[normal] cursor-pointer'><NavLink to='/Kontakt'>Контакты</NavLink></li>
   </ul>

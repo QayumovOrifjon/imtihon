@@ -5,8 +5,6 @@ import MuiAccordionSummary from '@mui/material/AccordionSummary';
 import MuiAccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
 import { AiOutlinePlus } from 'react-icons/ai';
-import { FiArrowUpRight } from 'react-icons/fi';
-import { BorderTop } from '@mui/icons-material';
 
 const WhiteAccordion = styled((props) => (
   <MuiAccordion disableGutters elevation={0} square {...props} />
@@ -40,7 +38,7 @@ const AccordionSummary = styled((props) => (
     backgroundColor: expanded ? '#088269' : '#E5E4ED',
     color: expanded ? '#fff' : '#202020',
     border: expanded ? '' : '1px solid #D5D1E1', 
-    transition: 'background-color 0.3s, color 0.3s, border 0.3s',
+    transition: 'background-color 0.3s, color 0.3s, border 0.3s, duration 200',
   },
   '& .MuiAccordionSummary-expandIconWrapper.Mui-expanded': {
     transform: 'rotate(45deg)',

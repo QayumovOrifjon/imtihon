@@ -13,6 +13,13 @@ import Kontakt from './pages/Kontakt/Kontakt.jsx'
 import KobinetKluch from './pages/KabinetKluch/KabinetKluch.jsx'
 import Uslugi from './pages/Uslugi/Uslugi.jsx'
 import Katalog from './pages/Katalog/Katalog.jsx'
+import Proizvoditeli from './pages/Proizvoditeli/Proizvoditeli.jsx'
+import Aktsiya from './pages/Aktsiya/Aktsiya.jsx'
+import Stati from './pages/Blog/Stati.jsx'
+import Vakansiya from './pages/Kompani/Vakansiya.jsx'
+import Sertifikati from './pages/Kompani/Sertifikati.jsx'
+import Otziv from './pages/Kompani/Otziv.jsx'
+import Product from './pages/Proizvoditeli/Product.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
@@ -29,6 +36,14 @@ ReactDOM.createRoot(document.getElementById('root')).render(
               <Route path="/Kobinet" element={<KobinetKluch />} />
               <Route path="/Uslugi" element={<Uslugi />} />
               <Route path="/Katalog" element={<Katalog />} />
+              <Route path="/Proizvoditeli" element={<Proizvoditeli />} />
+              <Route path="/Aktsiya" element={<Aktsiya />} />
+              <Route path="/Stati" element={<Stati />} />
+              <Route path="/Vakansiya" element={<Vakansiya />} />
+              <Route path="/Sertifikati" element={<Sertifikati />} />
+              <Route path="/Sertifikati" element={<Sertifikati />} />
+              <Route path="/Otziv" element={<Otziv />} />
+              <Route path="/Product" element={<Product />} />
               
             
             </Routes>

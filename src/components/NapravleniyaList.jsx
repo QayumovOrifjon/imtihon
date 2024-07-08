@@ -98,7 +98,7 @@ const NapravleniyaList = () => {
         </Link>
         <Link>
           <li className="flex justify-between items-center text-[14px]  hover:text-[#088269] duration-200 hover:underline hover:scale-105 ">
-            Кабинеты под ключ <IoIosArrowDown className='' />
+            Кабинеты под ключ <IoIosArrowDown className='rotate-[-90deg] w-[17px] h-[17px]' />
           </li>
         </Link>
       </ul>

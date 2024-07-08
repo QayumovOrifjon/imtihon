@@ -10,6 +10,7 @@ import WhiteAccordion from '../../ui/WhiteAccordion';
 import Form from '../../ui/Form';
 import Email from '../../components/Email/Email';
 import Footer from '../../components/Footer.jsx/Footer';
+import Header from '../../components/Header/Header';
 
 const Dostavka = () => {
   const navigate = useNavigate();
@@ -19,6 +20,7 @@ const Dostavka = () => {
   }
   return (
 <>
+<Header/>
 <div className='px-[35px]'>
   <div className='flex pt-5'>
 <p onClick={breadcast} className='text-[#7A7687] text-[14px] font-normal leading-[normal] cursor-pointer'>Главная {">"}</p> <span className='text-[#202020] text-[14px] font-normal leading-[normal] mb-[100px]'>Доставка</span>

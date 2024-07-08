@@ -6,10 +6,9 @@ import { GoHeart } from 'react-icons/go';
 import { LuBarChartHorizontalBig } from 'react-icons/lu';
 
 import Slider from 'react-slick';
-import { carousel } from '../Data/data';
 import { ButtCat, ButtSte, ButtTel } from './Button';
 
-const Carousel = ({}) => {
+const Carousel = ({carousel}) => {
   const sliderRef = useRef(null);
 
   const settings = {
@@ -40,6 +39,18 @@ const Carousel = ({}) => {
     ],
   };
 
+  const Status = (status) => {
+    switch (status) {
+      case 'Новинка':
+        return { backgroundColor: '#E1EFE6', color: '#088269', borderColor: '#088269' };
+      case 'Хит продаж':
+        return { backgroundColor: '#E6E6FD', color: '#424285', borderColor: '#424285' };
+      case '-30%':
+        return { backgroundColor: '#FFE095', color: '#AD7B00', borderColor: '#AD7B00' };
+      default:
+        return { backgroundColor: '#FFFFFF', color: 'inherit', borderColor: 'transparent' };
+    }
+  };
   return (
     <>
       <div className="relative ">
@@ -50,8 +61,10 @@ const Carousel = ({}) => {
               className="rounded-[10px] w-full max-w-[236px] md:max-w-[315px] border border-[#D5D1E1] overflow-hidden "
             >
               <div className="bg-white p-[10px] md:p-[30px] lg:p-[50px] relative mb-[15px] lg:mb-[20px]  flex justify-center items-center border-b border-[#D5D1E1]">
-                <img src={item.img} alt="image" className='w-full h-[172px] md:h-[142px]  lg:h-[229px]' />
-                <span className="absolute top-[15px] left-[15px] text-[#088269] text-[12px] lg:text-[14px] font-semibold leading-[normal] border border-[#088269] bg-[#E1EFE6] py-1 px-[10px] rounded-full ">
+                <img src={item.img} alt="image" className='w-full h-[172px] md:h-[142px]  lg:h-[229px] object-contain' />
+                <span className="absolute top-[15px] left-[15px] text-[#088269] text-[12px] lg:text-[14px] font-semibold leading-[normal] border border-[#088269] bg-[#E1EFE6] py-1 px-[10px] rounded-full "
+                  style={Status(item.status)}
+                >
                   {item.status}
                 </span>
                 <div className="flex items-center gap-[10px] absolute top-[15px] right-[15px]">

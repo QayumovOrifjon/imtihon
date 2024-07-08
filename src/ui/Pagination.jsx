@@ -10,7 +10,7 @@ const PaginationComp = ({ product, productPage, renderProduct }) => {
   const startIndex = (page - 1) * productPage;
   const endIndex = startIndex + productPage;
 
-  const currentItems = product.slice(startIndex, endIndex);
+  const Items = product.slice(startIndex, endIndex);
 
   const handlePage = (event, value) => {
     setPage(value);
@@ -22,7 +22,7 @@ const PaginationComp = ({ product, productPage, renderProduct }) => {
   return (
     <>
       <div>
-        {renderProduct(currentItems)}
+        {renderProduct(Items)}
       </div>
 
       <div className="flex mt-[30px] justify-center">

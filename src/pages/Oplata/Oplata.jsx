@@ -2,6 +2,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import Form from '../../ui/Form';
 import Footer from '../../components/Footer.jsx/Footer';
+import Header from '../../components/Header/Header';
 
 const Oplata = () => {
   const navigate = useNavigate();
@@ -12,13 +13,13 @@ const Oplata = () => {
 
   return (
  <>
- 
+ <Header/>
  <div className='px-[35px]'>
       <div className="flex pt-5">
         <p onClick={breadcast} className="text-[#7A7687] text-[14px] font-normal leading-normal cursor-pointer">
           Главная {'>'}
         </p>
-        <span className="text-[#202020] text-[14px] font-normal leading-normal mb-[100px]">Доставка</span>
+        <span className="text-[#202020] text-[14px] font-normal leading-normal mb-[100px]">Оплата</span>
       </div>
       <h1 className="text-[48px] font-medium leading-[110%]">Оплата</h1>
       <p className="text-[16px] font-medium leading-[140%] w-[650px] py-10">

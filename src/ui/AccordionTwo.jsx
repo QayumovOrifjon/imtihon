@@ -37,7 +37,7 @@ const AccordionSummary = styled((props) => (
     borderRadius: '50%',
     backgroundColor: expanded ? '#fff' : '#fff',
     color: expanded ? '#000' : '#202020',
-    transition: 'background-color 0.3s, color 0.3s',
+    transition: 'background-color 0.3s, color 0.3s, duration 200',
   },
   '& .MuiAccordionSummary-expandIconWrapper.Mui-expanded': {
     transform: 'rotate(45deg)',
@@ -49,7 +49,7 @@ const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
   backgroundColor: '#088269',
 }));
 
-export default function CustomizedAccordions( {text}) {
+export default function CustomizedAccordions(  {text}  ) {
   const [expanded, setExpanded] = React.useState('panel1');
 
   const handleChange = (panel) => (event, newExpanded) => {

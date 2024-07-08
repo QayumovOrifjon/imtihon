@@ -50,7 +50,10 @@ const Vopros = () => {
             </span>
             <p className="text-[12px] text-[#202020]">
               Нажимая «Отправить», я соглашаюсь c обработкой персональных данных
-              на условиях <span className="text-[#088269] text-[12px] font-medium leading-[normal]">Политики конфиденциальности.</span>
+              на условиях{" "}
+              <span className="text-[#088269] text-[12px] font-medium leading-[normal]">
+                Политики конфиденциальности.
+              </span>
             </p>
           </div>
         </div>

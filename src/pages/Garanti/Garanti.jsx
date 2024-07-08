@@ -17,6 +17,7 @@ const Garanti = () => {
   }
   return (
     <>
+    
     <Header/>
     <div className='px-[35px]'>
        <div className='flex pt-5'>
