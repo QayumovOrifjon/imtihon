@@ -20,7 +20,10 @@ import Form from '../../ui/Form'
 import Email from '../../components/Email/Email'
 import Footer from '../../components/Footer.jsx/Footer'
 import Header from '../../components/Header/Header'
-import { useNavigate } from 'react-router-dom'
+import { Link, NavLink, useNavigate } from 'react-router-dom'
+import { setCards } from '../../reducers/card'
+import { addCompare, setWishlist } from '../../reducers/wish'
+import { useDispatch } from 'react-redux'
 
 
 const Katalog = () => {
@@ -30,127 +33,137 @@ const Katalog = () => {
       navigate('/')
     }
 
+
+
+
+
+
+
+
   return (
     <>
     <Header/>
-    <div className='flex pt-5 px-[35px]'>
+    <div className='flex pt-5 container mt-[220px] '>
 <p onClick={breadcast} className='text-[#7A7687] text-[14px] font-normal leading-[normal] cursor-pointer'>Главная {" > " } </p> <span className='text-[#202020] text-[14px] font-normal leading-[normal]'>Каталог</span>
 
   
 </div> 
-      <div className="px-[35px] grid lg:grid-cols-[1fr_3fr] md:pt-[25px] grid-cols-1 gap-[10px] mb-[60px] md:mb-[120px] lg:mb-[150px]">
+      <div className="container grid lg:grid-cols-[1fr_3fr] md:pt-[25px] grid-cols-1 gap-[10px] mb-[60px] md:mb-[120px] lg:mb-[150px]">
       <NapravleniyaList/>
 
+
+
+
       <div className="grid grid-cols-2 md:grid-cols-3  gap-[10px] mb-[25px] ">
-        <div className="border border-[#e5e2ee] rounded-[10px] overflow-hidden h-[154px] sm:h-[216px] lg:h-[304px] ">
-          <div className=" bg-white h-[109px] sm:h-[148px] lg:h-[220px] ">
+        <Link to={"/ProductCategory"} className="border border-[#e5e2ee] rounded-[10px] overflow-hidden h-[154px] sm:h-[216px] lg:h-[304px] ">
+          <div className=" bg-white h-[109px] sm:h-[148px] lg:h-[220px] p-[10px] lg:p-[20px] ">
             <img src={Katalog1} alt="" className="w-full h-full object-contain " />
           </div>
           <div className=" py-[10px] px-[15px] lg:py-[20px] lg:px-[25px] pr-[50px] border-t ">
             <p className=" text-[12px] md:text-[14px] lg:text-[16px] font-medium leading-[118%] lg:leading-[140%]  ">
-              Дерматологическое оборудование
+            Ветеринарное оборудование
             </p>
           </div>
-        </div>
+        </Link>
 
-        <div className="border border-[#e5e2ee] rounded-[10px] overflow-hidden h-[154px] sm:h-[216px] lg:h-[304px] ">
-          <div className=" bg-white h-[109px] sm:h-[148px] lg:h-[220px] ">
-            <img src={Katalog3} alt="" className="w-full h-full object-contain " />
-          </div>
-          <div className=" py-[10px] px-[15px] lg:py-[20px] lg:px-[25px] pr-[50px] border-t ">
-            <p className=" text-[12px] md:text-[14px] lg:text-[16px] font-medium leading-[118%] lg:leading-[140%]  ">
-              Дерматологическое оборудование
-            </p>
-          </div>
-        </div>
-
-        <div className="border border-[#e5e2ee] rounded-[10px] overflow-hidden row-[span_2]  ">
-          <div className=" bg-white h-[272px] sm:h-[378px] lg:h-[534px] ">
+        <Link to={'/productcategory'} className="border border-[#e5e2ee] rounded-[10px] overflow-hidden h-[154px] sm:h-[216px] lg:h-[304px] ">
+          <div className=" bg-white h-[109px] sm:h-[148px] lg:h-[220px] p-[10px] lg:p-[20px] ">
             <img src={Katalog2} alt="" className="w-full h-full object-contain " />
           </div>
-          <div className="py-[10px] px-[15px] lg:py-[20px] lg:px-[25px] pr-[50px]  border-t ">
-            <p className="text-[12px] md:text-[14px] lg:text-[16px]  font-medium leading-[140%]  ">
-              Дерматологическое оборудование
-            </p>
-          </div>
-        </div>
-
-        <div className="border border-[#e5e2ee] rounded-[10px] overflow-hidden h-[154px] sm:h-[216px] lg:h-[304px] ">
-          <div className=" bg-white h-[109px] sm:h-[148px] lg:h-[220px] ">
-            <img src={Katalog4} alt="" className="w-full h-full object-contain " />
-          </div>
           <div className=" py-[10px] px-[15px] lg:py-[20px] lg:px-[25px] pr-[50px] border-t ">
             <p className=" text-[12px] md:text-[14px] lg:text-[16px] font-medium leading-[118%] lg:leading-[140%]  ">
-              Дерматологическое оборудование
+            Анестезиология
             </p>
           </div>
-        </div>
+        </Link>
 
-        <div className="border border-[#e5e2ee] rounded-[10px] overflow-hidden h-[154px] sm:h-[216px] lg:h-[304px] ">
-          <div className=" bg-white h-[109px] sm:h-[148px] lg:h-[220px] ">
-            <img src={Katalog5} alt="" className="w-full h-full object-contain " />
-          </div>
-          <div className=" py-[10px] px-[15px] lg:py-[20px] lg:px-[25px] pr-[50px] border-t ">
-            <p className=" text-[12px] md:text-[14px] lg:text-[16px] font-medium leading-[118%] lg:leading-[140%]  ">
-              Дерматологическое оборудование
-            </p>
-          </div>
-        </div>
-
-        <div className="border border-[#e5e2ee] rounded-[10px] overflow-hidden row-[span_2]  ">
-          <div className=" bg-white h-[272px] sm:h-[378px] lg:h-[534px] ">
-            <img src={Katalog6} alt="" className="w-full h-full object-contain " />
+        <Link to={'/productcategory'} className="border border-[#e5e2ee] rounded-[10px] overflow-hidden row-[span_2]  ">
+          <div className=" bg-white h-[272px] sm:h-[378px] lg:h-[534px] p-[10px] lg:p-[20px] ">
+            <img src={Katalog3} alt="" className="w-full h-full object-contain " />
           </div>
           <div className="py-[10px] px-[15px] lg:py-[20px] lg:px-[25px] pr-[50px]  border-t ">
             <p className="text-[12px] md:text-[14px] lg:text-[16px]  font-medium leading-[140%]  ">
-              Дерматологическое оборудование
+            Физиотерапевтическое оборудование
             </p>
           </div>
-        </div>
+        </Link>
 
-        <div className="border border-[#e5e2ee] rounded-[10px] overflow-hidden h-[154px] sm:h-[216px] lg:h-[304px] ">
-          <div className=" bg-white h-[109px] sm:h-[148px] lg:h-[220px] ">
-            <img src={Katalog7} alt="" className="w-full h-full object-contain " />
-          </div>
-          <div className=" py-[10px] px-[15px] lg:py-[20px] lg:px-[25px] pr-[50px] border-t ">
-            <p className=" text-[12px] md:text-[14px] lg:text-[16px] font-medium leading-[118%] lg:leading-[140%]  ">
-              Дерматологическое оборудование
-            </p>
-          </div>
-        </div>
-
-        <div className="border border-[#e5e2ee] rounded-[10px] overflow-hidden h-[154px] sm:h-[216px] lg:h-[304px] ">
-          <div className=" bg-white h-[109px] sm:h-[148px] lg:h-[220px] ">
-            <img src={Katalog8} alt="" className="w-full h-full object-contain " />
-          </div>
-          <div className=" py-[10px] px-[15px] lg:py-[20px] lg:px-[25px] pr-[50px] border-t ">
-            <p className=" text-[12px] md:text-[14px] lg:text-[16px] font-medium leading-[118%] lg:leading-[140%]  ">
-              Дерматологическое оборудование
-            </p>
-          </div>
-        </div>
-
-        <div className="border border-[#e5e2ee] rounded-[10px] overflow-hidden h-[154px] sm:h-[216px] lg:h-[304px] ">
-          <div className=" bg-white h-[109px] sm:h-[148px] lg:h-[220px] ">
-            <img src={Katalog9} alt="" className="w-full h-full object-contain " />
-          </div>
-          <div className=" py-[10px] px-[15px] lg:py-[20px] lg:px-[25px] pr-[50px] border-t ">
-            <p className=" text-[12px] md:text-[14px] lg:text-[16px] font-medium leading-[118%] lg:leading-[140%]  ">
-              Дерматологическое оборудование
-            </p>
-          </div>
-        </div>
-
-        <div className="border border-[#e5e2ee] rounded-[10px] overflow-hidden h-[154px] sm:h-[216px] lg:h-[304px] ">
-          <div className=" bg-white h-[109px] sm:h-[148px] lg:h-[220px] ">
+        <Link to={'/productcategory'} className="border border-[#e5e2ee] rounded-[10px] overflow-hidden h-[154px] sm:h-[216px] lg:h-[304px] ">
+          <div className=" bg-white h-[109px] sm:h-[148px] lg:h-[220px] p-[10px] lg:p-[20px] ">
             <img src={Katalog10} alt="" className="w-full h-full object-contain " />
           </div>
           <div className=" py-[10px] px-[15px] lg:py-[20px] lg:px-[25px] pr-[50px] border-t ">
             <p className=" text-[12px] md:text-[14px] lg:text-[16px] font-medium leading-[118%] lg:leading-[140%]  ">
-              Дерматологическое оборудование
+            Стоматологическое оборудование
             </p>
           </div>
-        </div>
+        </Link>
+
+        <Link to={'/productcategory'} className="border border-[#e5e2ee] rounded-[10px] overflow-hidden h-[154px] sm:h-[216px] lg:h-[304px] ">
+          <div className=" bg-white h-[109px] sm:h-[148px] lg:h-[220px] p-[10px] lg:p-[20px] ">
+            <img src={Katalog4} alt="" className="w-full h-full object-contain " />
+          </div>
+          <div className=" py-[10px] px-[15px] lg:py-[20px] lg:px-[25px] pr-[50px] border-t ">
+            <p className=" text-[12px] md:text-[14px] lg:text-[16px] font-medium leading-[118%] lg:leading-[140%]  ">
+            Хирургические инструменты
+            </p>
+          </div>
+        </Link>
+
+        <Link to={'/productcategory'} className="border border-[#e5e2ee] rounded-[10px] overflow-hidden row-[span_2]  ">
+          <div className=" bg-white h-[272px] sm:h-[378px] lg:h-[534px] p-[10px] lg:p-[20px] ">
+            <img src={Katalog5} alt="" className="w-full h-full object-contain " />
+          </div>
+          <div className="py-[10px] px-[15px] lg:py-[20px] lg:px-[25px] pr-[50px]  border-t ">
+            <p className="text-[12px] md:text-[14px] lg:text-[16px]  font-medium leading-[140%]  ">
+            Проктологическое оборудование
+            </p>
+          </div>
+        </Link>
+
+        <Link to={'/productcategory'} className="border border-[#e5e2ee] rounded-[10px] overflow-hidden h-[154px] sm:h-[216px] lg:h-[304px] ">
+          <div className=" bg-white h-[109px] sm:h-[148px] lg:h-[220px] p-[10px] lg:p-[20px] ">
+            <img src={Katalog6} alt="" className="w-full h-full object-contain " />
+          </div>
+          <div className=" py-[10px] px-[15px] lg:py-[20px] lg:px-[25px] pr-[50px] border-t ">
+            <p className=" text-[12px] md:text-[14px] lg:text-[16px] font-medium leading-[118%] lg:leading-[140%]  ">
+            Оборудование для медицинской метрологии
+            </p>
+          </div>
+        </Link>
+
+        <Link to={'/productcategory'} className="border border-[#e5e2ee] rounded-[10px] overflow-hidden h-[154px] sm:h-[216px] lg:h-[304px] ">
+          <div className=" bg-white h-[109px] sm:h-[148px] lg:h-[220px] p-[10px] lg:p-[20px] ">
+            <img src={Katalog7} alt="" className="w-full h-full object-contain " />
+          </div>
+          <div className=" py-[10px] px-[15px] lg:py-[20px] lg:px-[25px] pr-[50px] border-t ">
+            <p className=" text-[12px] md:text-[14px] lg:text-[16px] font-medium leading-[118%] lg:leading-[140%]  ">
+            Оборудование для мониторинга пациента
+            </p>
+          </div>
+        </Link>
+
+        <Link to={'/productcategory'} className="border border-[#e5e2ee] rounded-[10px] overflow-hidden h-[154px] sm:h-[216px] lg:h-[304px] ">
+          <div className=" bg-white h-[109px] sm:h-[148px] lg:h-[220px] p-[10px] lg:p-[20px] ">
+            <img src={Katalog8} alt="" className="w-full h-full object-contain " />
+          </div>
+          <div className=" py-[10px] px-[15px] lg:py-[20px] lg:px-[25px] pr-[50px] border-t ">
+            <p className=" text-[12px] md:text-[14px] lg:text-[16px] font-medium leading-[118%] lg:leading-[140%]  ">
+            Оборудование для радиационной терапии
+            </p>
+          </div>
+        </Link>
+
+        <Link to={'/productcategory'} className="border border-[#e5e2ee] rounded-[10px] overflow-hidden h-[154px] sm:h-[216px] lg:h-[304px] ">
+          <div className=" bg-white h-[109px] sm:h-[148px] lg:h-[220px] p-[10px] lg:p-[20px] ">
+            <img src={Katalog9} alt="" className="w-full h-full object-contain " />
+          </div>
+          <div className=" py-[10px] px-[15px] lg:py-[20px] lg:px-[25px] pr-[50px] border-t ">
+            <p className=" text-[12px] md:text-[14px] lg:text-[16px] font-medium leading-[118%] lg:leading-[140%]  ">
+            Педиатрическое оборудование
+            </p>
+          </div>
+        </Link>
       </div>
     </div>
     <Kabinet/>

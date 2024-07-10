@@ -19,7 +19,7 @@ const Garanti = () => {
     <>
     
     <Header/>
-    <div className='px-[35px]'>
+    <div className='container mt-[220px]'>
        <div className='flex pt-5'>
 <p onClick={breadcast} className='text-[#7A7687] text-[14px] font-normal leading-[normal] cursor-pointer'>Главная {">"}</p> <span className='text-[#202020] text-[14px] font-normal leading-[normal] mb-[100px]'>Гарантии </span>
 </div>

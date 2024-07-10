@@ -69,16 +69,16 @@ const Kompani = () => {
   return (
  <>
  <Header/>
- <div className='bg-[#F8F7F3]'>
+ <div className=' mt-[220px]'>
        
- <div className='flex pt-5 px-[35px]'>
+ <div className='flex pt-5 container'>
 <p onClick={breadcast} className='text-[#7A7687] text-[14px] font-normal leading-[normal] cursor-pointer'>Главная {">"}</p> <span className='text-[#202020] text-[14px] font-normal leading-[normal]'>О компании</span>
 
   
 </div> 
-<div className="pl-[35px] mb-[60px] md:mb-[120px] lg:mb-[150px] mt-[15px] md:mt-[25px] lg:mt-[40px] ">
+<div className="w-full container mb-[60px] md:mb-[120px] lg:mb-[150px] mt-[15px] md:mt-[25px] lg:mt-[40px] ">
         <div className="mb-[25px] lg:mb-10">
-          <img src={img} alt="" />
+          <img src={img} alt="" className='w-full'/>
         </div>
 
         <div className=" grid grid-cols-1 lg:grid-cols-2 ">
@@ -104,7 +104,7 @@ const Kompani = () => {
         </div>
       </div>
 
-      <div className=" px-[35px] mb-[60px] md:mb-[120px] lg:mb-[150px] grid grid-cols-1 lg:grid-cols-2 ">
+      <div className="container mb-[60px] md:mb-[120px] lg:mb-[150px] grid grid-cols-1 lg:grid-cols-2 ">
         <div>
         <p>Цифры и факты</p>
           <p className="text-[12px] md:text-[14px] lg:text-[16px] font-medium leading-[120%] lg:leading-[140%] w-[90%] lg:w-[50%] pt-[10px] md:pt-[20px] lg:pt-[25px] pb-[30px] opacity-50  ">
@@ -146,8 +146,8 @@ const Kompani = () => {
         </div>
       </div>
 
-      <div className="bg-[#088269] mb-[60px] md:mb-[120px] lg:mb-[150px] ">
-        <div className="pl-[35px] grid grid-cols-1 lg:grid-cols-2 py-[50px] lg:py-[80px] mr-[120px]  ">
+      <div className="  mb-[60px] md:mb-[120px] lg:mb-[150px] bg-[#088269]">
+        <div className="container grid grid-cols-1 lg:grid-cols-2 py-[50px] lg:py-[80px] mr-[120px]  ">
           <img src={imgAbout} alt="image" className=" pb-[25px] lg:pr-[120px]  " />
 
           <div>
@@ -168,7 +168,7 @@ const Kompani = () => {
         </div>
       </div>
 
-      <div className=" px-[35px] grid grid-cols-1 lg:grid-cols-2 pb-[60px] md:pb-[120px] lg:pb-[150px]  ">
+      <div className=" container grid grid-cols-1 lg:grid-cols-2 pb-[60px] md:pb-[120px] lg:pb-[150px]  ">
         <div className="mb-[30px] md:mb-[40px]">
           <div className="w-[80%] sm:w-[50%] md:w-[40%] lg:w-[90%] xl:w-[70%] ">
           <p>Опытные сотрудники из производственных компаний</p>
@@ -180,7 +180,7 @@ const Kompani = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-[3fr_2fr] gap-[10px] ">
+        <div className="grid grid-cols-1 md:grid-cols-[3fr_2fr] gap-[10px]  ">
           <div className="border border-[#E5E2EE] rounded-[10px] overflow-hidden ">
             <div className="w-full h-[261px] border-b bg-[#d6d7d9] ">
               <img src={handle()} alt="image" className="w-full h-full object-cover" />
@@ -229,9 +229,9 @@ const Kompani = () => {
       </div>
  </div>
  <Marqueee/>
- <Section/>
+<div className='mt-[150px]'> <Section/></div>
  <Brends/>
- <div className="bg-[#F8F7F3] px-[35px] grid grid-cols-1  lg:grid-cols-[1fr_3fr] overflow-hidden py-[60px] md:py-[120px] lg:py-[150px]">
+ <div className="bg-[#F8F7F3] container grid grid-cols-1  lg:grid-cols-[1fr_3fr] overflow-hidden py-[60px] md:py-[120px] lg:py-[150px]">
       <div className="mb-[31px] lg:mb-0 flex justify-between items-center lg:items-start ">
 
         <div className=''>
@@ -280,7 +280,7 @@ const Kompani = () => {
       </div>
     </div>
     </div>
-    <div className='grid grid-cols-2 px-[35px] gap-3 bg-[#F8F7F3] pb-[150px]'>
+    <div className='grid grid-cols-2 container gap-3 bg-[#F8F7F3] pb-[150px]'>
       <div className='rounded-xl'>
       <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d23985.317776691176!2d69.20951579999999!3d41.283519350000006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8a4758a84dc7%3A0xd5e59538910cd043!2sGafur%20Gulyam%20Recreation%20Park!5e0!3m2!1sen!2s!4v1719390343527!5m2!1sen!2s"

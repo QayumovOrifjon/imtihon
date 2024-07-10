@@ -8,7 +8,7 @@ import marq4 from '../../../public/assets/224-min.png'
 const Marqueee = () => {
   return (
     <div className="bg-[#E5E2EE] py-[50px] lg:py-[100px] ">
-      <div className="px-[35px] flex justify-between flex-col sm:flex-row ">
+      <div className="container flex justify-between flex-col sm:flex-row ">
         <div className="text-[18px] md:text-[20px] lg:text-[30px] mb-[50px] sm:mb-0 ">Наши клиенты</div>
         <div className="text-[28px] md:text-[34px] lg:text-[48px] w-[540px] ">
           БОЛЕЕ <span className="bg-transparent text-[#088269]">5000</span>{" "}

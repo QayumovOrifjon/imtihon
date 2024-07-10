@@ -4,8 +4,8 @@ import { brend } from "../../Data/data";
 import Brend from "../../ui/Brend";
 
 const Brends = () => {
-  return (
-    <div className="bg-[#F8F7F3] pl-[35px] grid grid-cols-1 lg:grid-cols-[1fr_3fr] overflow-hidden py-[60px] md:py-[120px] lg:py-[150px]">
+  return ( 
+    <div className="container grid grid-cols-1 g:grid-cols-[1fr_3fr] overflow-hidden py-[60px] md:py-[120px] lg:py-[150px] ">
       <div className="mb-[31px] lg:mb-0 flex justify-between items-center lg:items-start ">
 
         <div className=''>
@@ -22,7 +22,7 @@ const Brends = () => {
         </div>
       </div>
 
-      <div className="overflow-hidden ">
+      <div className="overflow-hidden">
         <Brend brend={brend} />
       </div>
     </div>

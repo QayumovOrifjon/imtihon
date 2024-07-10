@@ -31,7 +31,7 @@ const Kabinet = () => {
   };
 
   return (
-    <div className=" mb-[82px] md:mb-[120px] lg:mb-[150px]  pl-[35px]">
+    <div className=" md:mb-[120px] container">
       <div className=" mb-[25px] lg:mb-[43px]">
       
       </div>

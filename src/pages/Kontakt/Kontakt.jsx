@@ -21,7 +21,7 @@ const Kontakt = () => {
   return (
   <>
    <Header/>
-    <div className='bg-[#F8F7F3] px-[35px] pb-[150px] '>
+    <div className='bg-[#F8F7F3] container mt-[220px] pb-[150px] '>
        
 <div className='flex pt-5'>
 <p onClick={breadcast} className='text-[#7A7687] text-[14px] font-normal leading-[normal] cursor-pointer'>Главная {">"}</p> <span className='text-[#202020] text-[14px] font-normal leading-[normal]'>Контакты</span>

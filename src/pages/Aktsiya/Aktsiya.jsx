@@ -13,6 +13,8 @@ import Form from '../../ui/Form';
 import Email from '../../components/Email/Email';
 import Footer from '../../components/Footer.jsx/Footer';
 import Header from '../../components/Header/Header';
+import { useDispatch } from 'react-redux';
+import { setCards } from '../../reducers/card';
 
 
 
@@ -34,6 +36,15 @@ const Status = (status) => {
       return { backgroundColor: '#FFFFFF', color: 'inherit', borderColor: 'transparent' };
   }
 };
+
+const dispatch = useDispatch();
+
+
+  const handleCartClick = (e, item) => {
+    e.stopPropagation();
+    dispatch(setCards(item));
+  };
+
 
   const productPage = 9;
 
@@ -97,19 +108,20 @@ const renderProduct = (aksiya) => (
   </div>
 );
 
+
   return (
 
     
    <>
    <Header/>
-    <div className='flex pt-5 px-[35px] mb-5'>
+    <div className='flex pt-5 container mt-[220px] mb-5'>
 <p onClick={breadcast} className='text-[#7A7687] text-[14px] font-normal leading-[normal] cursor-pointer'>Главная {">"}</p> <span className='text-[#202020] text-[14px] font-normal leading-[normal]'>Акции</span>
 
   
 </div>
-   <div>
+   <div >
 <div onClick={()=>setFilt ((prev) => !prev)}
-  className='flex md:hidden items-center gap-2 cursor-pointer  justify-center  border rounded-[10px] py-[12px] px-[20px] mt-[20px] mb-[10px] relative' >
+  className='flex md:hidden items-center gap-2 cursor-pointer  justify-center  border rounded-[10px] py-[12px] container mt-[20px] mb-[10px] relative' >
 <VscSettings />
 <p>
 {value}
@@ -173,7 +185,7 @@ className={`${filt ? 'flex' : 'hidden'} flex-col gap-3 absolute z-10 w-full bord
    </div>
 
 
-<div className='grid grid-cols-1 md:grid-cols-[1fr_3fr] gap-[10px] pl-[35px] mb-[150px]'>
+<div className='grid grid-cols-1 md:grid-cols-[1fr_3fr] gap-[10px] container mb-[150px]'>
   <div className='border p-5 rounded-lg h-[240px]'>
     <p className='text-[16px] font-medium leading-[140%] border-b-[1px] pb-2'>Категории</p> 
     <ul className='flex flex-col gap-y-2'>
@@ -191,10 +203,10 @@ className={`${filt ? 'flex' : 'hidden'} flex-col gap-3 absolute z-10 w-full bord
     renderProduct={renderProduct}/>
   </div>
 </div>
-<Kabinet/>
+<div className='mb-[150px]'><Kabinet/></div>
 <Tovar text='Ранее смотрели'/>
 <Brends/>
-<div className='grid grid-cols-2 gap-2.5 mb-[150px] px-[35px]'>
+<div className='grid grid-cols-2 gap-2.5 mb-[150px] container'>
         <div>
         <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d23985.317776691176!2d69.20951579999999!3d41.283519350000006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8a4758a84dc7%3A0xd5e59538910cd043!2sGafur%20Gulyam%20Recreation%20Park!5e0!3m2!1sen!2s!4v1719390343527!5m2!1sen!2s"

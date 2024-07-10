@@ -15,7 +15,7 @@ const FooterBot = () => {
             <span className="text-[12px] text-white ">ООО «ГЛОБАЛ МЕДИКАЛ ТРЕЙД»</span>
           </div>
         </div>
-        <div className="pl-[35px] grid grid-cols-1 md:grid-cols-5 pt-[10px] ">
+        <div className="container grid grid-cols-1 md:grid-cols-5 pt-[10px] ">
         <div className="hidden md:block ">
           <img src={logo} alt="" />
           <span className="text-[10px] text-white ">ООО «ГЛОБАЛ МЕДИКАЛ ТРЕЙД»</span>
@@ -54,7 +54,7 @@ const FooterBot = () => {
           </div>
         </div>
       </div>
-      <div className="pl-[35px] grid grid-cols-1 gap-[15px] md:gap-[10px] md:grid-cols-[1fr_4fr] pb-[10px] ">
+      <div className="container grid grid-cols-1 gap-[15px] md:gap-[10px] md:grid-cols-[1fr_4fr] pb-[10px] ">
         <p className="text-white text-[12px] w-[150px] ">© 2022 Медоборудование Все права защищены</p>
         <p className="text-white text-[12px] opacity-60 ">
           Информация на данном сайте носит справочный характер и не является публичной офертой,

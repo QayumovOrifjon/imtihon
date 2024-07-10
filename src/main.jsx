@@ -20,10 +20,21 @@ import Vakansiya from './pages/Kompani/Vakansiya.jsx'
 import Sertifikati from './pages/Kompani/Sertifikati.jsx'
 import Otziv from './pages/Kompani/Otziv.jsx'
 import Product from './pages/Proizvoditeli/Product.jsx'
+import ProductCategory from './components/ProductCategory/ProductCategory.jsx'
+import Palata from './pages/KabinetKluch/Palata.jsx'
+import Faq from './pages/FAQ/Faq.jsx'
+import { Provider } from 'react-redux'
+import store from './store/Store.js'
+import Korzinka from './pages/Korzinka/Korzinka.jsx'
+import Snarvit from './pages/Snarvit/Snarvit.jsx'
+import Heart from './pages/Heart/Heart.jsx'
+import Profile from './pages/User/Profile.jsx'
+import Tovar from './pages/Tovar/Tovar.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-   <Router>
+  <Provider store={store}>
+  <Router>
             <App />
             <Routes>
             <Route path="/" element={<Glavnaya />} /> 
@@ -44,9 +55,18 @@ ReactDOM.createRoot(document.getElementById('root')).render(
               <Route path="/Sertifikati" element={<Sertifikati />} />
               <Route path="/Otziv" element={<Otziv />} />
               <Route path="/Product" element={<Product />} />
+              <Route path="/ProductCategory" element={<ProductCategory />} />
+              <Route path="/Palata" element={<Palata />} />
+              <Route path="/Faq" element={<Faq />} />
+              <Route path="/Korzinka" element={<Korzinka />} />
+              <Route path="/Snarvit" element={<Snarvit />} />
+              <Route path="/Heart" element={<Heart />} />
+              <Route path="/Profile" element={<Profile />} />
+              <Route path="/tovar/:id" element={<Tovar />} />
               
             
             </Routes>
           </Router>
+  </Provider>
   </React.StrictMode>,
 )

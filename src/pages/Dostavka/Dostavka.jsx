@@ -21,7 +21,7 @@ const Dostavka = () => {
   return (
 <>
 <Header/>
-<div className='px-[35px]'>
+<div className='container'>
   <div className='flex pt-5'>
 <p onClick={breadcast} className='text-[#7A7687] text-[14px] font-normal leading-[normal] cursor-pointer'>Главная {">"}</p> <span className='text-[#202020] text-[14px] font-normal leading-[normal] mb-[100px]'>Доставка</span>
 
@@ -95,7 +95,7 @@ const Dostavka = () => {
 
 <CustomizedAccordions text='Часто задоваемые вопросы'/>
 
-<div className=' px-[35px]'>
+<div className=' container'>
 <div className='grid grid-cols-2 items-center'>
   <div className="">
           <p className="font-medium leading-[120%] text-[18px] md:text-[20px] xl:text-[30px] pb-[25px] md:pb-[30px] lg:pb-0  ">
@@ -137,7 +137,7 @@ className='rounded-xl'
 </div>
 
 <WhiteAccordion text1='Юридические лица' text2='Индивидуальные предприниматели' text3='Физические лица' subtitle1='Но синтетическое тестирование, в своём классическом представлении, допускает внедрение поэтапного и последовательного развития общества.   В рамках спецификации современных стандартов, сторонники тоталитаризма в науке будут функционально разнесены.' text='Документы, необходимые для получения груза' subtitle='По копиям доверенностей и доверенностям с незаполненными обязательными реквизитами отгрузка не производится'/>
-<div className='grid grid-cols-2 mb-[150px]'>
+<div className='grid grid-cols-2 mb-[150px] container'>
   <div className='w-[530px]'>
     <p className='text-[30px] font-medium leading-[120%]'>Вам нужна консультация?</p>
     <p>Задайте их по номеру телефона <span className='text-[#088269]'> +7 (495) 000-00-00 </span>или оставьте свои координаты и наш менеджер перезвонит вам через 10 минут</p>

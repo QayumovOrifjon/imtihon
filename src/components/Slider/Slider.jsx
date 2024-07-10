@@ -19,7 +19,7 @@ const Slider = () => {
   };
 
   return (
-    <div className=" mt-[30px] mb-[40px] md:mb-[84px] lg:mb-[120px] relative px-[35px]">
+    <div className="  mb-[40px] md:mb-[84px] lg:mb-[120px] relative px-[35px] mt-[250px] container">
       <div className=" overflow-hidden w-full z-0 relative bg-[#E5E4ED] rounded-[10px] max-h-[780px] ">
         <div
           style={{ transform: `translateX(-${isShow * 100}% )` }}

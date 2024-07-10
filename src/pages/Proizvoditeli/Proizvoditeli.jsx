@@ -3,7 +3,7 @@ import { VscSettings } from "react-icons/vsc";
 import { IoChevronDownOutline } from "react-icons/io5";
 import { MenuNap, StraneNap, proiz } from '../../Data/data';
 import Header from '../../components/Header/Header';
-import { useNavigate } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import { FaSearch } from 'react-icons/fa';
 import { ButtSte, ButtTel } from '../../ui/Button';
 import PaginationComp from '../../ui/Pagination';
@@ -46,26 +46,26 @@ const Proizvoditeli = () => {
       }
 
       const Place = () => {
-        if (nav && strane) {
-          return { top: '365px' };
-        } else if (nav) {
-          return { top: '50px' };
-        } else if (strane) {
-          return { top: '365px' };
-        } else {
-          return { top: '50px' };
-        }
-      };
-
+         if (nav && strane) {
+           return { top: '365px' };
+         } else if (nav) {
+           return { top: '50px' };
+         } else if (strane) {
+           return { top: '365px' };
+         } else {
+           return { top: '50px' };
+         }
+       };
+    
   return (
    <>
    <Header/>
-   <div className='flex pt-5 px-[35px]'>
+   <div className='flex pt-5 px-[35px] gap-5 mt-[240px] container'>
       <p onClick={breadcast} className='text-[#7A7687] text-[14px] font-normal leading-[normal] cursor-pointer'>Главная {">"}</p>
       <span className='text-[#202020] text-[14px] font-normal leading-[normal]'>Производители</span>
    </div> 
 
-   <div className='mt-[20px] px-[35px] grid grid-cols-1 md:grid-cols-[1fr_3fr] justify-between gap-[10px] mb-[150px]'>
+   <div className='mt-[20px] container grid grid-cols-1 md:grid-cols-[1fr_3fr] justify-between gap-[10px] mb-[150px]'>
       <div className='relative'>
          <div 
             onClick={() => setNav((next) => !next)}
@@ -75,14 +75,14 @@ const Proizvoditeli = () => {
             <p className='text-[14px] font-medium leading-[118%]'>{value}</p>
             <IoChevronDownOutline className={`${nav ? 'rotate-180':''} w-10 h-3 duration-300 hidden md:block`}/>
 
-            <div className={`${nav ? 'flex flex-col absolute duration-200 top-[55px] rounded-lg gap-y-3 border p-5 gap-2 w-full left-0' : 'hidden'}`}>
+            <div className={`${nav ? 'flex flex-col absolute z-0 duration-200 top-[55px] rounded-lg gap-y-3 border p-5 gap-2 w-full left-0' : 'hidden'}`}>
                {MenuNap.map((list, index) => (
                   <div 
                      key={index}
                      onClick={() => setValue(list)}
-                     className={`text-[12px] flex justify-between items-center hover:text-[red] duration-200 hover:underline hover:scale-105`}
+                     className={`text-[12px] flex justify-between items-center hover:text-[#088269] duration-200 hover:underline hover:scale-105`}
                   >
-                     {list}
+                  <NavLink to='/ProductCategory'>{list}</NavLink>
                      <IoChevronDownOutline className={`rotate-[-90deg] w-[17px] h-[17px]`} />
                   </div>
                ))}
@@ -90,7 +90,7 @@ const Proizvoditeli = () => {
          </div>
 
          <div
-            className={`${nav ? 'top-[470px]' : null} hidden md:block absolute z-10 w-full mt-[10px] border border-[] py-[15px] px-[20px] rounded-[10px] bg-[#F8F7F3]`}
+            className={`${nav ? 'top-[470px]' : null} hidden md:block  absolute z-0 w-full mt-[10px] border border-[] py-[15px] px-[20px] rounded-[10px] bg-[#F8F7F3]`}
          >
             <div 
                onClick={() => setStrane((prev) => !prev)}
@@ -139,7 +139,7 @@ renderProduct={renderProiz}
    </div>
    <Tovar/>
    <Section/>
-   <Kompaniye/>
+  <div> <Kompaniye/></div>
    <CustomizedAccordions/>
    <div className='grid grid-cols-2 gap-2.5 mb-[150px] px-[35px]'>
         <div>

@@ -31,7 +31,7 @@ const Blog = () => {
    <div>
      <p className='text-[14px] md:text-[16px] lg:text-[18px] font-semibold '>Что такое инфузомат (инфузионный насос)</p>
      <p className='text-[10px] md:text-[12px] mb-[10px] md:mb-[15px] lg:mb-[25px]  '>14.03.2023</p>
-     <p className=' custom-text text-[--text] '>{blog.content} </p>
+     <p className=' text-[--text] '>{blog.content} </p>
    </div>
    <div>
      <ButtTel title={'Подробнее'} />
@@ -45,25 +45,27 @@ const Blog = () => {
   return (
     <>
     <Header/>
-     <div className='flex pt-5 px-[35px]'>
+     <div className='flex pt-5 container mt-[220px]'>
 <p onClick={breadcast} className='text-[#7A7687] text-[14px] font-normal leading-[normal] cursor-pointer'>Главная {">"}</p> <span className='text-[#202020] text-[14px] font-normal leading-[normal] mb-[100px]'>Блог</span>
 
   
 </div>
 
-      <p className=" custom-title px-[35px]  hidden lg:block  text-[48px] font-medium leading-[110%]">Блог</p>
+    <div className='container'>
+    <p className=" px-[35px]  hidden lg:block  text-[48px] font-medium leading-[110%]">Блог</p>
 
-      <div className="px-[35px] grid lg:grid-cols-[1fr_3fr] md:pt-[25px] grid-cols-1 gap-[10px] custom-margin ">
-        <NapravleniyaList />
+<div className="px-[35px] grid lg:grid-cols-[1fr_3fr] md:pt-[25px] grid-cols-1 gap-[10px] custom-margin ">
+  <NapravleniyaList />
 
-        <div className='flex flex-col'>
-        <PaginationTwo
-        product={blog}
-        productPage={product}
-        renderProduct={renderProduct}
-        />
-        </div>
-      </div>
+  <div className='flex flex-col'>
+  <PaginationTwo
+  product={blog}
+  productPage={product}
+  renderProduct={renderProduct}
+  />
+  </div>
+</div>
+    </div>
  <div className='mt-[150px]'>     <Email /></div>
      <Footer/>
      <Outlet/>

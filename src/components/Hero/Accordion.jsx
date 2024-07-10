@@ -58,8 +58,8 @@ export default function CustomizedAccordions({text} ) {
 
   return (
     
-    <div className="bg-[#088269] py-[60px] lg:py-[120px] mb-[60px] md:mb-[120px] lg:mb-[150px]">
-      <div className="px-[35px] grid grid-cols-1 md:grid-cols-2">
+    <div className="bg-[#088269] py-[60px] lg:py-[150px] mb-[60px] md:mb-[150px] lg:mb-[150px]">
+      <div className="px-[35px] grid grid-cols-1 md:grid-cols-2 container">
         <div className="text-white">
           <p className="text-[18px] md:text-[20px] lg:text-[30px] font-medium leading-[120%] text-white mb-[50px] ">  {text} </p>
         </div>

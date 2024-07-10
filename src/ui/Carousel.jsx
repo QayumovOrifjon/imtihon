@@ -7,9 +7,23 @@ import { LuBarChartHorizontalBig } from 'react-icons/lu';
 
 import Slider from 'react-slick';
 import { ButtCat, ButtSte, ButtTel } from './Button';
+import { useDispatch, useSelector } from 'react-redux';
+import { setCards, setItems } from '../reducers/card';
+import { addCompare, setWishlist } from '../reducers/wish';
+import { useNavigate } from 'react-router-dom';
 
 const Carousel = ({carousel}) => {
   const sliderRef = useRef(null);
+  const dispatch = useDispatch();
+
+  const handleCartClick = (e, item) => {
+    e.stopPropagation();
+    dispatch(setCards(item));
+  };
+
+
+
+
 
   const settings = {
     dots: false,
@@ -51,14 +65,31 @@ const Carousel = ({carousel}) => {
         return { backgroundColor: '#FFFFFF', color: 'inherit', borderColor: 'transparent' };
     }
   };
+
+  const { wishlist, compare } = useSelector((state) => state.wish);
+
+  const handleLikeClick = (e, item) => {
+    e.stopPropagation();
+    dispatch(setWishlist(item));
+  };
+
+  const handleCompare = (e, item) => {
+    e.stopPropagation();
+    dispatch(addCompare(item));
+  };
+  // const isLiked = wishlist.some((cartItem) => cartItem.id === item.id);
+  // const isCompared = compare.some((cartItem) => cartItem.id === item.id);
+  
+  const navigate = useNavigate();
   return (
     <>
       <div className="relative ">
         <Slider ref={sliderRef} {...settings}>
           {carousel.map((item) => (
             <div
+            onClick={() => navigate(`/tovar/${item.id}`)}
               key={item.id}
-              className="rounded-[10px] w-full max-w-[236px] md:max-w-[315px] border border-[#D5D1E1] overflow-hidden "
+              className="rounded-[10px] w-full  md:max-w-[340px] border border-[#D5D1E1] overflow-hidden "
             >
               <div className="bg-white p-[10px] md:p-[30px] lg:p-[50px] relative mb-[15px] lg:mb-[20px]  flex justify-center items-center border-b border-[#D5D1E1]">
                 <img src={item.img} alt="image" className='w-full h-[172px] md:h-[142px]  lg:h-[229px] object-contain' />
@@ -68,28 +99,39 @@ const Carousel = ({carousel}) => {
                   {item.status}
                 </span>
                 <div className="flex items-center gap-[10px] absolute top-[15px] right-[15px]">
-                  <LuBarChartHorizontalBig className="w-6 h-6 rotate-[-90deg] hover:text-[#088269] duration-200 cursor-pointer" />
-                  <GoHeart className="w-6 h-6 hover:text-[#088269] duration-200 cursor-pointer" />
+                <div className="flex items-center gap-[10px] absolute top-[15px] right-[15px]">
+          <LuBarChartHorizontalBig 
+          onClick={(e)=> handleCompare(e, item)}
+           className={`  w-6 h-6 rotate-[-90deg] hover:text-[--pri] duration-200 cursor-pointer`} />
+
+<div onClick={(e) => handleLikeClick(e, item)}>
+           
+              <GoHeart className="w-6 h-6 hover:text-[--pri] duration-200 cursor-pointer" />
+        
+          </div>
+        </div>
+                 
                 </div>
               </div>
 
               <div className="flex flex-col px-[15px] pb-[10px] lg:pb-[15px]">
-                <div className="flex flex-col w-[90%] xl:w-[60%] mb-[15px]">
-                  <p className="text-[16px] lg:text-[18px] font-semibold leading-[normal] mb-[10px]">
+                <div className="flex flex-col w-[90%] xl:w-[80%] mb-[15px]">
+                  <p className="text-[16px] lg:text-[18px]  font-semibold leading-[normal] mb-[10px]">
                     {item.title}
                   </p>
                   <span className="text-[12px] font-normal leading-[normal] text-[#888494] mb-1">
-                    Артикул: {item.element}
+                    Артикул: {item.number}
                   </span>
                   <span className="text-[12px] font-normal leading-[normal] text-[#888494]">
-                    {item.isAvailable ? 'В наличии' : 'нет в наличии'}
+                    {item.pay ? 'В наличии' : 'нет в наличии'}
                   </span>
                   <p className=" mt-[15px] lg:mt-[30px] text-[16px] lg:text-[18px] font-semibold leading-[normal] text-[#202020]">
                     {item.price} руб.
                   </p>
                 </div>
-                <ButtCat title={'Добавить в корзину'} />
-              </div>
+               
+                <button  onClick={(e) => handleCartClick(e, item)}> <ButtCat  title={'Добавить в корзину'} /></button>
+              </div> 
             </div>
           ))}
         </Slider>

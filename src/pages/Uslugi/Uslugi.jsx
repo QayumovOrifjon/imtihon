@@ -51,12 +51,13 @@ const Uslugi = () => {
   return (
     <>
    <Header/>
-   <div className='flex pt-5 px-[35px]'>
+<div className='container'>
+<div className='flex pt-5 container mt-[220px]'>
 <p onClick={breadcast} className='text-[#7A7687] text-[14px] font-normal leading-[normal] cursor-pointer'>Главная {">"}</p> <span className='text-[#202020] text-[14px] font-normal leading-[normal]'>Услуги</span>
 
   
 </div> 
-      <div className="mt-[40px] md:mt-[50px] lg:mt-[100px] px-[35px]">
+      <div className="mt-[40px] md:mt-[50px] lg:mt-[100px] ">
         <p className="mb-[30px] lg:mb-[40px]  text-[28px] md:text-[34px] lg:text-[48px] ">Услуги</p>
 
         <div className='grid grid-cols-1 md:grid-cols-2 gap-[10px] '>
@@ -85,7 +86,7 @@ const Uslugi = () => {
         </div>
       </div>
 
-      <div className=" grid grid-cols-1 lg:grid-cols-2 px-[35px] mt-[150px]">
+      <div className=" grid grid-cols-1 lg:grid-cols-2  mt-[150px]">
         <div>
           <Text text={'Цифры и факты'} />
           <p className="text-[12px] md:text-[14px] lg:text-[16px] font-medium leading-[120%] lg:leading-[140%] w-[90%] lg:w-[50%] pt-[10px] md:pt-[20px] lg:pt-[25px] pb-[30px] opacity-50  ">
@@ -127,7 +128,7 @@ const Uslugi = () => {
         </div>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2  px-[35px]">
+      <div className="grid grid-cols-1 md:grid-cols-2 ">
         <div className=" ">
           <p className=" font-medium w-[575px] leading-[120%] text-[18px] md:text-[20px] xl:text-[30px] pb-[25px] md:pb-[30px] lg:pb-0  ">
             Вы сможете <span className="text-[#088269] ">оставить заявку</span> на услуги и скачать
@@ -218,7 +219,7 @@ const Uslugi = () => {
     </div>
 
 
-    <div className='grid grid-cols-2 px-[35px] gap-3 bg-[#F8F7F3] pb-[150px]'>
+    <div className='grid grid-cols-2 gap-3 bg-[#F8F7F3] pb-[150px]'>
       <div className='rounded-xl'>
       <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d23985.317776691176!2d69.20951579999999!3d41.283519350000006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8a4758a84dc7%3A0xd5e59538910cd043!2sGafur%20Gulyam%20Recreation%20Park!5e0!3m2!1sen!2s!4v1719390343527!5m2!1sen!2s"
@@ -235,6 +236,7 @@ const Uslugi = () => {
         />
       </div>
     </div>
+</div>
     <Footer/>
     </>
   );

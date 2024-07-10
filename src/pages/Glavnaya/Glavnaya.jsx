@@ -18,7 +18,7 @@ const Glavnaya = () => {
     <div className='bg-[#F8F7F3]'>
 <Header/>    
 <Slider/> 
-<Category/>
+<div className='mb-[150px]'><Category/></div>
 <Kabinet/>
 <Section/>
 <Tovar/>

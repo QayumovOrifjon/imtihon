@@ -6,6 +6,7 @@ import { IoIosStar } from 'react-icons/io';
 import HoverRating from '../../ui/Star';
 import Form from '../../ui/Form';
 import Footer from '../../components/Footer.jsx/Footer';
+import Header from '../../components/Header/Header';
 
 
 const Otziv = () => {
@@ -41,7 +42,8 @@ const Otziv = () => {
     );
   return (
   <>
-    <div className='px-[35px]'>
+  <Header/>
+    <div className='container mt-[220px]'>
          <div className='flex pt-5  mb-5 gap-2'>
 <p onClick={breadcast} className='text-[#7A7687] text-[14px] font-normal leading-[normal] cursor-pointer'>Главная {">"}</p><span onClick={() =>{
 navigate('/Kompani')

@@ -66,7 +66,7 @@ export default function CustomizedAccordions({
 
   return (
     <div className="bg-[#E5E4ED] py-[60px] lg:py-[120px] mb-[60px] md:mb-[120px] lg:mb-[150px]">
-      <div className="px-[35px] grid grid-cols-1 md:grid-cols-2">
+      <div className="container grid grid-cols-1 md:grid-cols-2">
         <div className="text-white">
           <p className="text-[18px] md:text-[20px] lg:text-[30px] font-medium leading-[120%] text-[#202020] mb-[50px] ">
             {text}

@@ -5,7 +5,7 @@ const Email = () => {
   return (
     
     <div className='bg-[#e5e4ed] '>
-        <div className='px-[35px]'>
+        <div className='container'>
         <div className='grid email justify-center sm:justify-end '>  
               <div className='pt-[35px]'>
                 <p className='text-[#202020] text-[30px] font-medium leading-[120%]'>Подпишитесь и будьте в курсе!</p>

@@ -22,7 +22,7 @@ export const ButtTel = ({title}) => {
   }
   export const ButtCat = ({title}) => {
     return (
-      <button className="text-[12px]   py-2 lg:py-[11px] px-[20px] lg:px-[30px] border border-[#D5D1E1] hover:bg-[#088269] hover:text-white duration-200 text-[#088269] rounded-full font-semibold  hover:border-[#07745E]">
+      <button className="text-[12px] w-full  py-2 lg:py-[11px] px-[20px] lg:px-[30px] border border-[#D5D1E1] hover:bg-[#088269] hover:text-white duration-200 text-[#088269] rounded-full font-semibold  hover:border-[#07745E]">
         {title}
       </button>
     )

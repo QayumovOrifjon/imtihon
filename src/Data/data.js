@@ -27,37 +27,66 @@ import image16 from "../../public/assets/Katalog9.png";
 import image17 from "../../public/assets/Katalog10.png";
 import ellips from "../../public/assets/Ellipse3.svg";
 
+import kab from "../../public/assets/Photo-min.png";
+import kab2 from "../../public/assets/Photo1.png";
+import kab3 from "../../public/assets/Photot-min.png";
+import kab4 from "../../public/assets/Photo-min.png";
+import kab5 from "../../public/assets/Photo1.png";
+import kab6 from "../../public/assets/Photot-min.png";
 
+import brend1 from "../../public/assets/cropped-min.png";
+import brend2 from "../../public/assets/5-min.png";
+import brend3 from  "../../public/assets/custom-2.png";
+
+import komSlider from  "../../public/assets/Rectangle.png";
+import komSlider2 from  "../../public/assets/Rectangle1.png";
+import komSlider3 from  "../../public/assets/Rectangle2.png";
+import komSlider4 from  "../../public/assets/Rectangle2.png";
+
+import usl from "../../public/assets/uslugi1.png"
+import usl2 from "../../public/assets/uslugi2.png"
+import usl3 from "../../public/assets/uslugi3.png"
+import usl4 from "../../public/assets/uslugi4.png"
+import usl5 from "../../public/assets/uslugi5.png"
+import usl6 from "../../public/assets/uslugi6.png"
+import usl7 from "../../public/assets/uslugi8.png"
+import usl8 from "../../public/assets/uslugi7.png"
+
+import ser from "../../public/assets/11-min.png"
+import ser2 from "../../public/assets/11-min.png"
+import ser3 from "../../public/assets/11-min.png"
+import ser4 from "../../public/assets/11-min.png"
+import ser5 from "../../public/assets/11-min.png"
 
 export const kabinet = [
   {
     id: 1,
-    img: "../../public/assets/Photo-min.png",
+    img: kab,
     title: "Экспресс лаборатория",
   },
   {
     id: 2,
-    img: "../../public/assets/Photo1.png",
+    img: kab2,
     title: "Лазерная терапия",
   },
   {
     id: 3,
-    img: "../../public/assets/Photot-min.png",
+    img: kab3,
     title: "Операционный блок",
   },
   {
     id: 4,
-    img: "../../public/assets/Photo-min.png",
+    img: kab4,
     title: "Экспресс лаборатория",
   },
   {
     id: 5,
-    img: "../../public/assets/Photo1.png",
+    img: kab5,
     title: "Лазерная терапия",
   },
   {
     id: 6,
-    img: "../../public/assets/Photot-min.png",
+    img: kab6,
     title: "Операционный блок",
   },
 ];
@@ -102,68 +131,72 @@ export const carousel = [
 export const brend = [
   {
     id: 1,
-    img: "../../public/assets/cropped-min.png",
+    img: brend1,
     title: "НМИЦ онкологии им. Н.Н. Блохина",
   },
   {
     id: 2,
-    img: "../../public/assets/5-min.png",
+    img: brend2,
     title: "НМИЦ онкологии им. Н.Н. Блохина",
   },
   {
     id: 3,
-    img: "../../public/assets/custom-2.png",
+    img: brend3,
     title: "НМИЦ онкологии им. Н.Н. Блохина",
   },
 ];
+
+
 
 export const kompaniyeSlider = [
   {
     id: 1,
-    img: "../../public/assets/Rectangle.png",
+    img:komSlider ,
     title: "Название новости",
     desc: "Допускает внедрение поэтапного и развития общества.",
   },
   {
     id: 2,
-    img: "../../public/assets/Rectangle1.png",
+    img: komSlider2,
     title: "Название новости",
     desc: "Допускает внедрение поэтапного и развития общества.",
   },
   {
     id: 3,
-    img: "../../public/assets/Rectangle2.png",
+    img: komSlider3,
     title: "Название новости",
     desc: "Допускает внедрение поэтапного и развития общества.",
   },
   {
     id: 4,
-    img: "../../public/assets/Rectangle2.png",
+    img: komSlider4,
     title: "Название новости",
     desc: "Допускает внедрение поэтапного и развития общества.",
   },
 ];
 
+
+
 export const sertifikat = [
   {
     id: 1,
-    img: "../../public/assets/11-min.png",
+    img: ser,
   },
   {
     id: 2,
-    img: "../../public/assets/11-min.png",
+    img: ser2,
   },
   {
     id: 3,
-    img: "../../public/assets/11-min.png",
+    img: ser3,
   },
   {
     id: 4,
-    img: "../../public/assets/11-min.png",
+    img: ser4,
   },
   {
     id: 5,
-    img: "../../public/assets/11-min.png",
+    img: ser5,
   },
 ];
 
@@ -281,54 +314,55 @@ export const kobinet = [
   },
 ];
 
+
 export const uslugi = [
   {
     id: "ser1",
     title: "Апробация",
-    img: "../../public/assets/uslugi1.png",
+    img:usl ,
     desc: "Также как постоянное информационно-пропагандистское обеспечение нашей деятельности требует определения и уточнения распределения внутренних резервов и ресурсов. ",
   },
   {
     id: "ser2",
     title: "Помощь инженеров в настройке",
-    img: "../../public/assets/uslugi2.png",
+    img: usl2,
     desc: "Также как постоянное информационно-пропагандистское обеспечение нашей деятельности требует определения и уточнения распределения внутренних резервов и ресурсов. ",
   },
   {
     id: "ser3",
     title: "Обучение работе с оборудованием",
-    img: "../../public/assets/uslugi3.png",
+    img: usl3,
     desc: "Также как постоянное информационно-пропагандистское обеспечение нашей деятельности требует определения и уточнения распределения внутренних резервов и ресурсов. ",
   },
   {
     id: "ser4",
     title:
       "Работа с учебными центрами повышения квалификации медицинского персонала",
-    img: "../../public/assets/uslugi4.png",
+    img: usl4,
     desc: "Также как постоянное информационно-пропагандистское обеспечение нашей деятельности требует определения и уточнения распределения внутренних резервов и ресурсов. ",
   },
   {
     id: "ser5",
     title: "Помощь в подборе оборудования",
-    img: "../../public/assets/uslugi5.png",
+    img: usl5,
     desc: "Также как постоянное информационно-пропагандистское обеспечение нашей деятельности требует определения и уточнения распределения внутренних резервов и ресурсов. ",
   },
   {
     id: "ser6",
     title: "Пуско-наладочные работы",
-    img: "../../public/assets/uslugi6.png",
+    img: usl6,
     desc: "Также как постоянное информационно-пропагандистское обеспечение нашей деятельности требует определения и уточнения распределения внутренних резервов и ресурсов. ",
   },
   {
     id: "ser7",
     title: "Подменный аппарат",
-    img: "../../public/assets/uslugi8.png",
+    img: usl7,
     desc: "Также как постоянное информационно-пропагандистское обеспечение нашей деятельности требует определения и уточнения распределения внутренних резервов и ресурсов. ",
   },
   {
     id: "ser8",
     title: "Организация обучения врачей на собственной территории",
-    img: "../../public/assets/uslugi7.png",
+    img: usl8,
     desc: "Также как постоянное информационно-пропагандистское обеспечение нашей деятельности требует определения и уточнения распределения внутренних резервов и ресурсов. ",
   },
 ];
@@ -458,7 +492,7 @@ export const aksiya = [
     price: 100000,
     isAvailable: true,
     amount: 0,
-    element: 213134,
+    number: 213134,
     status: "Новинка",
     slider: [image1, image2, image4],
   },
@@ -470,7 +504,7 @@ export const aksiya = [
     price: 200000,
     isAvailable: true,
     amount: 0,
-    element: 213134,
+    number: 213134,
     status: "-30%",
     slider: [image1, image3, image5],
   },
@@ -482,7 +516,7 @@ export const aksiya = [
     price: 500000,
     isAvailable: true,
     amount: 0,
-    element: 213134,
+    number: 213134,
     status: "Новинка",
     slider: [image1, image4, image8],
   },
@@ -494,7 +528,7 @@ export const aksiya = [
     price: 70000,
     isAvailable: true,
     amount: 0,
-    element: 213134,
+    number: 213134,
     status: "Хит продаж",
     slider: [image1, image6, image10],
   },
@@ -506,7 +540,7 @@ export const aksiya = [
     price: 100000,
     isAvailable: true,
     amount: 0,
-    element: 213134,
+    number: 213134,
     status: "Новинка",
     slider: [image1, image10, image11],
   },
@@ -518,7 +552,7 @@ export const aksiya = [
     price: 300000,
     isAvailable: false,
     amount: 0,
-    element: 213134,
+    enumber: 213134,
     status: "-30%",
     slider: [image1, image12, image15],
   },
@@ -530,7 +564,7 @@ export const aksiya = [
     price: 400000,
     isAvailable: true,
     amount: 0,
-    element: 213134,
+    enumber: 213134,
     status: "Хит продаж",
     slider: [image1, image7, image17],
   },
@@ -542,7 +576,7 @@ export const aksiya = [
     price: 150000,
     isAvailable: true,
     amount: 0,
-    element: 213134,
+    enumber: 213134,
     status: "Новинка",
     slider: [image1, image6, image9],
   },
@@ -554,7 +588,7 @@ export const aksiya = [
     price: 110000,
     isAvailable: false,
     amount: 0,
-    element: 213134,
+    enumber: 213134,
     status: "Хит продаж",
     slider: [image1, image11, image14],
   },
@@ -566,7 +600,7 @@ export const aksiya = [
     price: 200000,
     isAvailable: true,
     amount: 0,
-    element: 213134,
+    enumber: 213134,
     status: "-30%",
     slider: [image1, image2, image4],
   },
@@ -578,7 +612,7 @@ export const aksiya = [
     price: 400000,
     isAvailable: true,
     amount: 0,
-    element: 213134,
+    enumber: 213134,
     status: "Новинка",
     slider: [image1, image2, image3],
   },
@@ -590,7 +624,7 @@ export const aksiya = [
     price: 100000,
     isAvailable: true,
     amount: 0,
-    element: 213134,
+    enumber: 213134,
     status: "Хит продаж",
     slider: [image3, image2, image1],
   },
@@ -602,7 +636,7 @@ export const aksiya = [
     price: 250000,
     isAvailable: true,
     amount: 0,
-    element: 213134,
+    enumber: 213134,
     status: "Новинка",
     slider: [image1, image5, image7],
   },
@@ -614,7 +648,7 @@ export const aksiya = [
     price: 440000,
     isAvailable: true,
     amount: 0,
-    element: 213134,
+    enumber: 213134,
     status: "-30%",
     slider: [image1, image4, image6],
   },
@@ -626,7 +660,7 @@ export const aksiya = [
     price: 500000,
     isAvailable: false,
     amount: 0,
-    element: 213134,
+    enumber: 213134,
     status: "Новинка",
     slider: [image4, image1, image2],
   },
@@ -638,7 +672,7 @@ export const aksiya = [
     price: 500000,
     isAvailable: false,
     amount: 0,
-    element: 213134,
+    enumber: 213134,
     status: "Новинка",
     slider: [image1, image5, image9],
   },
@@ -745,3 +779,100 @@ desc:'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt necessi
   },
 ];
 
+// export const faq = [
+//   {
+    
+//     text: '',
+
+//   },
+//   {
+
+//     text1:'О компании',
+//     subtitle1: 'Но синтетическое тестирование, в своём классическом представлении, допускает внедрение поэтапного и последовательного развития общества.   В рамках спецификации современных стандартов, сторонники тоталитаризма в науке будут функционально разнесены.'
+
+//   },
+//   {
+//     text2: 'О компании',
+//     subtitle1: 'Но синтетическое тестирование, в своём классическом представлении, допускает внедрение поэтапного и последовательного развития общества.   В рамках спецификации современных стандартов, сторонники тоталитаризма в науке будут функционально разнесены.'
+
+//   },
+//   {
+//     text1: 'О компании',
+//     subtitle1: 'Но синтетическое тестирование, в своём классическом представлении, допускает внедрение поэтапного и последовательного развития общества.   В рамках спецификации современных стандартов, сторонники тоталитаризма в науке будут функционально разнесены.'
+
+//   },
+//   {
+//     text1: 'О компании',
+//     subtitle1: 'Но синтетическое тестирование, в своём классическом представлении, допускает внедрение поэтапного и последовательного развития общества.   В рамках спецификации современных стандартов, сторонники тоталитаризма в науке будут функционально разнесены.'
+
+//   },
+//   {
+//     text1: 'О компании',
+//     subtitle1: 'Но синтетическое тестирование, в своём классическом представлении, допускает внедрение поэтапного и последовательного развития общества.   В рамках спецификации современных стандартов, сторонники тоталитаризма в науке будут функционально разнесены.'
+
+//   },
+//   {
+//     text1: 'О компании',
+//     subtitle1: 'Но синтетическое тестирование, в своём классическом представлении, допускает внедрение поэтапного и последовательного развития общества.   В рамках спецификации современных стандартов, сторонники тоталитаризма в науке будут функционально разнесены.'
+
+//   },
+//   {
+//     text1: 'О компании',
+//     subtitle1: 'Но синтетическое тестирование, в своём классическом представлении, допускает внедрение поэтапного и последовательного развития общества.   В рамках спецификации современных стандартов, сторонники тоталитаризма в науке будут функционально разнесены.'
+
+//   },
+//    {
+//     text1: 'О компании',
+//     subtitle1: 'Но синтетическое тестирование, в своём классическом представлении, допускает внедрение поэтапного и последовательного развития общества.   В рамках спецификации современных стандартов, сторонники тоталитаризма в науке будут функционально разнесены.'
+
+//   },
+//  {
+//     text1: 'О компании',
+//     subtitle1: 'Но синтетическое тестирование, в своём классическом представлении, допускает внедрение поэтапного и последовательного развития общества.   В рамках спецификации современных стандартов, сторонники тоталитаризма в науке будут функционально разнесены.'
+
+//   },
+//  {
+//     text1: 'О компании',
+//     subtitle1: 'Но синтетическое тестирование, в своём классическом представлении, допускает внедрение поэтапного и последовательного развития общества.   В рамках спецификации современных стандартов, сторонники тоталитаризма в науке будут функционально разнесены.'
+
+//   },
+//  {
+//     text1: 'О компании',
+//     subtitle1: 'Но синтетическое тестирование, в своём классическом представлении, допускает внедрение поэтапного и последовательного развития общества.   В рамках спецификации современных стандартов, сторонники тоталитаризма в науке будут функционально разнесены.'
+
+//   },
+// ];
+export const tabData = [
+  {
+    name: 'Вес оборудования',
+    value: '90 кг',
+  },
+  {
+    name: 'Детектор ',
+    value: 'CsI - на основе аморфного кремния',
+  },
+  {
+    name: 'Время сканирования ',
+    value: 'CPAN стандарт - 12 сек',
+  },
+  {
+    name: 'Размер фокусного пятна  ',
+    value: '0.6',
+  },
+  {
+    name: 'Динамический диапазон  ',
+    value: '16 бит (65 536 градации серого)',
+  },
+  {
+    name: 'Рабочее напряжение  ',
+    value: '90 кг',
+  },
+  {
+    name: 'Максимальный ток  ',
+    value: 'CsI - на основе аморфного кремния',
+  },
+  {
+    name: 'Гарантия   ',
+    value: 'PAN стандарт - 12 сек',
+  },
+];
